@@ -1,0 +1,46 @@
+/* purple */
+.purple mark {
+    color: var(--color-purple);
+    background-color: var(--color-purple-mark);
+}
+
+footer {display: none !important;}
+
+footer .purple {
+    color: var(--color-purple);
+}
+
+footer .purple::before {
+    background-color: var(--color-purple);
+}
+
+/* green */
+footer .green {
+    color: var(--color-green);
+}
+
+footer .green::before {
+    background-color: var(--color-green);
+}
+
+/* blue */
+.blue mark {
+    color: var(--color-blue);
+    background-color: var(--color-blue-mark);
+}
+footer .blue {
+    color: var(--color-blue);
+}
+
+footer .blue::before {
+    background-color: var(--color-blue);
+}
+
+/* red */
+footer .red {
+    color: var(--color-red);
+}
+
+footer .red::before {
+    background-color: var(--color-red);
+}

@@ -1,0 +1,51 @@
+.blog-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .blog-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .blog-container {
+        grid-template-columns: auto;
+    }
+}
+
+.blog-container .blog-post {
+    margin: 1rem;
+    padding: 2rem;
+    transition: all .2s ease;
+}
+
+.blog-container .blog-post:hover {
+    background-color: var(--color-primary);
+}
+
+.blog-container .blog-post:hover .category,
+.blog-container .blog-post:hover .title {
+    color: var(--color-light);
+}
+
+.blog-container .blog-post:hover img {
+    filter: sepia(1);
+}
+
+.blog-container .blog-post img {
+    width: 100%;
+    position: relative;
+}
+
+.blog-container .blog-post .category {
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.blog-container .blog-post .title {
+    font-weight: bold;
+    font-size: 2.6rem;
+}

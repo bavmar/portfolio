@@ -1,0 +1,108 @@
+* {
+    text-decoration: none;
+}
+
+h1{
+    margin: 0;
+    font-family: 'Roboto Slab',serif;
+    font-size: 7rem;
+    font-weight: 100;
+    line-height: 7rem;
+    color: var(--color-heading);
+}
+
+p, p span {
+    font-family: 'Montserrat',sans-serif;
+    color: var(--color-text);
+    font-size: 2.6rem;
+    font-weight: 400;
+}
+
+small {
+    font-size: 2.4rem;
+    color: var(--color-small);
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 5vh 0;
+}
+
+footer a {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+    
+}
+
+footer a::before {
+    content: '';
+    z-index: 0;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 21px;
+    height: 4px;
+    transition: width .7s cubic-bezier(0.19,1,0.22,1);
+}
+
+footer a:hover {
+    cursor: pointer;
+}
+
+footer a:hover:before {
+    width: 100%;
+}
+
+mark {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+mark::before {
+    content: '';
+    width: 100%;
+    z-index: -1;
+    display: block;
+    position: absolute;
+    height: 4px;
+    top: 90%;
+    left: 0;
+    bottom: 0;
+}
+
+
+h2 {
+    font-size: 10.6rem;
+    line-height: 12.6rem;
+    font-weight: 800;
+    margin-bottom: 12rem;
+}
+
+h2 a:visited,
+h2 a {
+    text-decoration: underline;
+    color: var(--color-primary);
+    padding: 2rem;
+    transition: .3s all ease;
+}
+
+h2 a:visited:hover,
+h2 a:hover {
+    background-color: var(--color-gray-dark);
+    color: var(--color-light);
+}
+
+h3 {
+    font-size: 3.6rem;
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--color-heading);
+}
+
+.projects  {
+    color: var(--color-light);
+}

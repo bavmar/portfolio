@@ -1,0 +1,72 @@
+/* full css reset */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    font: inherit;
+}
+
+html {
+    /* This defines what 1rem is */
+    font-size: 62.5%; /* 1 rem = 10px; 10px/16px = 62.5% */
+    overflow: auto;
+}
+
+body {
+    background-color: #171a19;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top:0;left:0;bottom:0;right:0;
+}
+
+:root {
+    /* Main colors */
+    --color-red: #d9594c;
+    --color-purple: #9a4cd9;
+    --color-green: #419d78;
+    --color-blue: #53a2be;
+    
+
+    /* Typography */
+    --color-heading: #fbfbfb;
+    --color-text: #ddd;
+    --color-small: #666;
+
+    /* Styling */
+    --color-red-mark: #d9594c24;
+    --color-purple-mark: #9a4cd924;
+    --color-green-mark: #419d7824;
+    --color-blue-mark: #53a2be24;
+    --color-dark-background: rgba(0, 0, 0, 0.5);
+}
+
+/* Shrink all elements that use REM (responsive) */
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 56.25%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: 50%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    html {
+        font-size: 40%;
+    }
+}
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 20%;
+    }
+}
+

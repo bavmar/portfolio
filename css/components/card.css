@@ -1,0 +1,54 @@
+.flex-card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 3rem 2rem;
+    margin: 1rem;
+    border-radius: 2rem;
+    background-color: var(--color-gray-dark);
+    flex: 25%;
+}
+
+.card-top {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+}
+
+.card-top img,
+.card-top .card-date {
+    width: 50%;
+}
+
+.card-top .card-date {
+    text-align: right;
+}
+
+.card-title {
+    color: var(--color-gray);
+    font-size: 1.8rem;
+}
+
+.card-main {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.card-sub {
+    font-size: 1.8rem;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .card {
+        flex: 35%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card {
+        flex: 100%;
+    }
+}

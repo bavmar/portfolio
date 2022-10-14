@@ -1,0 +1,44 @@
+@keyframes float {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-1rem);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes go-top {
+	0%, 40% {
+		top: 0;
+	}
+
+	99%, 100% {
+		top: -100vh;
+	}
+	100% {
+		display: none;
+	}
+}
+
+@keyframes go-bottom {
+	0%, 40%{
+		bottom: 0;
+	}
+
+	99%, 100%{
+		bottom: -100vh;
+	}
+
+	100% {
+		display: none;
+	}
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}

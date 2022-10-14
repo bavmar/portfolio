@@ -1,0 +1,43 @@
+span {
+    display: block;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper .container {
+    position: relative;
+    width: 90vw;
+    max-width: 1000px;
+    height: 90%;
+    margin: 0 auto;
+}
+
+header, main, footer {
+    width: 100%;
+    display: block;
+}
+
+main {
+    height: 80%;
+    padding: 100px 0;
+}
+
+aside {
+    font-family: 'Roboto Slab',serif;
+    font-size: 2rem;
+    color: var(--color-heading);
+    margin-top: 20px;
+    text-align: center;
+}
+address {
+    font-family: 'Roboto Slab',serif;
+    font-size: 2rem;
+    color: var(--color-heading);
+    text-align: center;
+}
+
+

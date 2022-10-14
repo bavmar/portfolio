@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    justify-content: center;
+    height: 10%;
+}
+
+header .dots-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    height: 100%;
+}
+
+header .dots-container>div {
+    height: 10px; width: 10px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.dots-container>div:nth-child(1) {
+    background-color: var(--color-blue);
+}
+
+.dots-container>div:nth-child(2) {
+    background-color: var(--color-red);
+}
+
+.dots-container>div:nth-child(3) {
+    background-color: var(--color-purple);
+}
+
+.dots-container>div:nth-child(4) {
+    background-color: var(--color-green);
+}

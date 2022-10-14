@@ -1,0 +1,59 @@
+/* Helperclasses*/
+.bg-light {
+    background-color: var(--color-light);
+}
+
+.bg-light p,
+.bg-light h2,
+.bg-light h1  {
+    color: var(--color-dark);
+}
+
+.bg-dark {
+    background-color: var(--color-dark);
+}
+
+.bg-dark p,
+.bg-dark h2,
+.bg-dark h1   {
+    color: var(--color-light);
+}
+
+.bg-light h3,
+.bg-dark h3 {
+    color: var(--color-gray);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+.bg-primary h2 {
+    color: var(--color-light);
+    text-align: center;
+    margin: 0;
+}
+
+.floating {
+    animation: float 3s infinite ease-in-out;
+    opacity: .5;
+    transition: .2s all ease-in-out;
+    border: 1.5rem solid transparent;
+}
+
+.floating:hover {
+    opacity: 1;
+    border: 1.5rem solid var(--color-primary);
+    animation-play-state: paused;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.padding-top {
+    padding-top: 25rem;
+}
