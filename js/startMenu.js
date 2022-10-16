@@ -110,10 +110,11 @@ const Stars = {
 
             //  INTERACTIVITY
             if (Stars.mouse.x - this.x < Stars.mouseDistance && Stars.mouse.x - this.x > -Stars.mouseDistance && Stars.mouse.y - this.y < Stars.mouseDistance && Stars.mouse.y - this.y > -Stars.mouseDistance) {
-            if (this.radius < Stars.menuMaxRadius) this.radius += 1;
+            if (this.radius < Stars.menuMaxRadius) this.radius += 1, document.body.style.cursor = 'pointer';
             else if (Stars.mouse.clicked) window.open(url);
             } else if (this.radius > this.minRadius) {
                 this.radius -= 1;
+                document.body.style.cursor = '';
             }
 
             this.draw();
