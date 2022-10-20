@@ -47,6 +47,8 @@ width: 20px;
 }
 .projects > ul li a i {
     transition: 0.2s;
+    margin: 0.5rem 0;
+    padding-bottom: 3px;
 }
 .projects > ul li a:hover i {
     box-shadow: 0 2px 0px 0px var(--color-heading);
