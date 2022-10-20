@@ -103,6 +103,12 @@ h3 {
     color: var(--color-heading);
 }
 
+h4 {
+    font-size: 3.6rem;
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--color-heading);
+}
+
 .projects  {
     color: var(--color-light);
 }
