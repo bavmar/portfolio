@@ -4,8 +4,6 @@
     background-color: var(--color-purple-mark);
 }
 
-footer {display: none !important;}
-
 footer .purple {
     color: var(--color-purple);
 }

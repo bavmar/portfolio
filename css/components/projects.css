@@ -36,9 +36,14 @@ width: 20px;
 .projects > ul > li {
     list-style: none;
     background-color: var(--color-dark-background);
-    margin-bottom: 1vh;
+    margin-bottom: 3.5vh;
+    border-bottom: 0.5rem solid var(--color-purple);
     border-radius: 15px;
-    padding: 15px;
+    padding: 3rem 5rem;
+
+}
+.projects > ul > li > * {
+    margin-bottom: 1rem;
 }
 
 .projects > ul li a {
@@ -55,11 +60,20 @@ width: 20px;
     transition: 0.2s;
 }
 .projects > ul li details {
-    font-size: 2rem;
+    font-size: 2.6rem;
     font-family: 'Montserrat',sans-serif;
     color: var(--color-heading)
 }
 
 .projects > ul > li > details > summary:hover {
     cursor: pointer;
+}
+
+.fa-youtube {
+    color: var(--color-red);
+}
+
+.projects > ul li a:hover .fa-youtube {
+    box-shadow: 0 2px 0px 0px var(--color-red);
+    transition: 0.2s;
 }

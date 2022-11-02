@@ -20,6 +20,9 @@
         <!-- favicon -->
         <link rel='icon' href='favicon.png'> 
         <link href='https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap' rel='stylesheet'>
+
+        <!-- FA -->
+        <script src='https://kit.fontawesome.com/8bbc72781c.js' crossorigin='anonymous'></script>
         
         <!-- title -->
         <title>Bart van Maarschalkerweerd Portfolio</title>
@@ -30,10 +33,12 @@
             <div class='container'>
                 <header>
                     <nav class='dots-container'>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <a href='index.html' class='fa-solid fa-house'></a>
+                        <a href='projects.html' class='fa-solid fa-code'></a>
+                        <a href='https://github.com/bavmar'target='_blank' class='fa-brands fa-square-github'></a>
+                        <a href='https://codepen.io/BartvanMaarschalkerweerd' target='_blank' class='fa-brands fa-codepen'></a>
+                        <a href='https://www.linkedin.com/in/bart-van-maarschalkerweerd/'class='fa-brands fa-linkedin'></a>
+                        <a href='mailto:bart.vanmaarschalkerweerd@outlook.com'class='fa-solid fa-square-envelope'></a>
                     </nav>
                 </header>
                 <main class='blue'>
@@ -42,11 +47,23 @@
                         Hi, I'm <mark>Bart van Maarschalkerweerd</mark> <wbr>web developer.
                     </h1>
                     <small>&lt;&#47;h1&gt;</small>
-                    <!-- <footer>
-                        <a href='https://codepen.io/BartvanMaarschalkerweerd' target="_blank" class='red'>CodePen</a>
-                        <a href='projects.html' class='purple'>Projects</a>
-                        <a href='mailto:bart.vanmaarschalkerweerd@outlook.com' class='green'>Tell me something</a>
-                    </footer> -->
+                    <footer>
+                        <section>
+                            <a href='projects.html' class='purple'>Projects</a>
+                        </section>
+                        <section> 
+                            <ul class='green'>Contact
+                                <div class='hidden'>
+                                    <li>
+                                        <a href='mailto:bart.vanmaarschalkerweerd@outlook.com'>E-mail</a>
+                                    </li>
+                                    <li>
+                                        <a href='https://www.linkedin.com/in/bartvanmaarschalkerweerd/' target='_'>LinkedIn</a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </section>
+                    </footer>
                 </main>
             </div>
             <aside>THIS PORTFOLIO IS A WORK IN PROGRESS! 😁</aside>
@@ -55,6 +72,6 @@
     </body>
 
     <!-- scripts -->
-    <script src="js/main.js"></script>
-    <script src='js/startMenu.js'></script>
+    <script src='js/main.js'></script>
+    <script src='js/stars.js'></script>
 </html>

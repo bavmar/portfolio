@@ -33,6 +33,7 @@ canvas {
     --color-purple: #9a4cd9;
     --color-green: #419d78;
     --color-blue: #53a2be;
+    --color-yellow: #babe53;
     
 
     /* Typography */
@@ -66,7 +67,7 @@ canvas {
 }
 @media only screen and (max-width: 480px) {
     html {
-        font-size: 20%;
+        font-size: 30%;
     }
 }
 

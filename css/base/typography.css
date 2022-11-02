@@ -25,36 +25,6 @@ small {
     margin: 5vh 0;
 }
 
-footer a {
-    font-family: 'Montserrat',sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
-    margin-right: 12px;
-    
-}
-
-footer a::before {
-    content: '';
-    z-index: 0;
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: -0.5rem;
-    width: 21px;
-    height: 4px;
-    transition: width .7s cubic-bezier(0.19,1,0.22,1);
-}
-
-footer a:hover {
-    cursor: pointer;
-}
-
-footer a:hover:before {
-    width: 100%;
-}
-
 mark {
     display: inline-block;
     position: relative;
@@ -99,7 +69,8 @@ h2 a:hover {
 
 h3 {
     font-size: 3.6rem;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family:'Montserrat',sans-serif;
+
     color: var(--color-heading);
 }
 

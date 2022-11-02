@@ -16,7 +16,7 @@ span {
     margin: 0 auto;
 }
 
-header, main, footer {
+header, main {
     width: 100%;
     display: block;
 }

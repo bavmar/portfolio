@@ -6,7 +6,7 @@ const Stars = {
 
     // BACKGROUND
     mouseDistance: 100,
-    starsAmount: 1200,
+    starsAmount: 300,
     radius: 1,
     maxRadius: 5,
 
