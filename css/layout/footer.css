@@ -81,9 +81,9 @@ footer > section > ul a{
     color: var(--color-heading);
 }
 
-footer > section > ul a:hover {
-    
-}
+/* footer > section > ul a:hover {
+
+} */
 
 footer ul:hover:before {
     height: 100%;
