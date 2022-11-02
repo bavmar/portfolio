@@ -43,9 +43,9 @@ footer a:hover:before {
     width: 100%;
 }
 
-footer ul {
+/* footer ul {
     
-}
+} */
 
 footer ul:hover .hidden {
     visibility: visible;
