@@ -35,6 +35,12 @@ canvas {
     --color-blue: #53a2be;
     --color-yellow: #babe53;
     
+    --javascript: #f1e05a;
+    --html: #e34c26;
+    --css: #563d7c;
+    --python:#3572A5;
+    --typescript: #3178c6;
+    --lua: #000080;
 
     /* Typography */
     --color-heading: #fbfbfb;
@@ -60,7 +66,7 @@ canvas {
         font-size: 50%;
     }
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 620px) {
     html {
         font-size: 40%;
     }

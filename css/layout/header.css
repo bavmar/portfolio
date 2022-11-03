@@ -1,50 +1,90 @@
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     height: 10%;
 }
+header > div {
+    flex-basis: 100%;
+    text-align: right;
+}
+
+header > div > a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 2rem;
+    color: var(--color-green);
+}
+
+header > div > a:hover span {
+    display: inline-block;
+}
+
+header > div > a > span {
+    display: none;
+}
+
 
 header .dots-container {
     display: inline-flex;
     align-items: center;
+    justify-content: space-between;
     height: 100%;
+    width: 50%;
+}
+
+@media only screen and (max-width: 620px) {
+    header .dots-container {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 header .dots-container>a {
+    font-size: 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--color-heading);
+}
+
+header .dots-container>a::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    border-radius: 100%;
+    width: 4px;
+    height: 4px;
+    margin-right: 5px;
+    transition: .2s cubic-bezier(0.19,1,0.22,1);
+}
+header .dots-container>a:hover::before {
+    width: 8px;
+    height: 8px;
+    transition: .2s cubic-bezier(0.19,1,0.22,1);
+}
+
+/* header .dots-container>a {
     width: 5rem; height: 5rem;
     font-size: 3.5rem;
     border-radius: 75%;
     text-align: center;
     background-color: var(--color-blue-mark);
     color: var(--color-blue);
-}
-
-/* .dots-container>a:nth-child(1) {
-    background-color: var(--color-blue-mark);
-    color: var(--color-blue);
-}
-
-.dots-container>a:nth-child(2) {
-    background-color: var(--color-blue-mark);
-    color: var(--color-blue);
-}
-
-.dots-container>a:nth-child(3) {
-    background-color: var(--color-blue-mark);
-    color: var(--color-blue);
-}
-
-.dots-container>a:nth-child(4) {
-    background-color: var(--color-blue-mark);
-    color: var(--color-blue);
-}
-
-.dots-container>a:nth-child(5) {
-    background-color: var(--color-blue-mark);
-    color: var(--color-blue);
-}
-
-.dots-container>a:nth-child(6) {
-    background-color: var(--color-blue-mark);
-    color: var(--color-blue);
 } */
+
+header .dots-container>a:first-child::before{
+    background: var(--color-blue);
+}
+header .dots-container>a:nth-child(2):before{
+    background: var(--color-purple);
+}
+header .dots-container>a:nth-child(3):before{
+    background: var(--color-yellow);
+}
+header .dots-container>a:nth-child(4):before{
+    background: var(--color-red);
+}
+header .dots-container>a:nth-child(5):before{
+    background: #0077B5;
+}
