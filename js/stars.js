@@ -8,7 +8,7 @@ const Stars = {
     mouseDistance: 100,
     starsAmount: 300,
     radius: 1,
-    maxRadius: 5,
+    maxRadius: 2.5,
 
     //  MOUSE
     mouse: {
