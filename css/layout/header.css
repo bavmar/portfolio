@@ -47,7 +47,7 @@ header > div > a > span {
     transition-duration: 0.1s;
 }
 
-header .dots-container {
+header nav {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -56,7 +56,7 @@ header .dots-container {
 }
 
 @media only screen and (max-width: 620px) {
-    header .dots-container {
+    header nav {
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
@@ -72,13 +72,13 @@ header .dots-container {
     }
 }
 
-header .dots-container>a {
+header nav>a {
     font-size: 3rem;
     font-family: 'IBM Plex Mono', monospace;
     color: var(--color-heading);
 }
 
-header .dots-container>a::before {
+header nav>a::before {
     content: '';
     display: inline-block;
     position: relative;
@@ -89,29 +89,29 @@ header .dots-container>a::before {
     transition: .2s cubic-bezier(0.19,1,0.22,1);
 }
 
-header .dots-container>a:hover::before {
+header nav>a:hover::before{
     width: 8px;
     height: 8px;
     margin-right: 4px; 
     transition: .2s cubic-bezier(0.19,1,0.22,1);
 }
 
-header .dots-container>a:first-child::before{
+header nav>a:first-child::before{
     background: var(--color-blue);
 }
 
-header .dots-container>a:nth-child(2):before{
+header nav>a:nth-child(2):before{
     background: var(--color-purple);
 }
 
-header .dots-container>a:nth-child(3):before{
+header nav>a:nth-child(3):before{
     background: var(--color-yellow);
 }
 
-header .dots-container>a:nth-child(4):before{
+header nav>a:nth-child(4):before{
     background: var(--color-red);
 }
 
-header .dots-container>a:nth-child(5):before{
+header nav>a:nth-child(5):before{
     background: #0077B5;
 }

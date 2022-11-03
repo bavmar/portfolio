@@ -4,6 +4,14 @@
     background-color: var(--color-purple-mark);
 }
 
+.blue {
+    color: var(--color-blue);
+}
+
+.purple {
+    color: var(--color-purple);
+}
+
 footer .purple {
     color: var(--color-purple);
 }
