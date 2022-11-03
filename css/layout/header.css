@@ -13,16 +13,39 @@ header > div > a {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 2rem;
     color: var(--color-green);
+    position: relative;
+    padding: 1rem 0;
+}
+
+header > div > a::before {
+    content: '';
+    z-index: 0;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -0.5rem;
+    width: 0;
+    height: 3px;
+    background: var(--color-green);
+    transition: width .7s cubic-bezier(0.19,1,0.22,1);
+}
+
+header > div > a:hover::before {
+    width: 100%;
 }
 
 header > div > a:hover span {
-    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+    transition-duration: 0.2s;
 }
 
 header > div > a > span {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 0.1s;
 }
-
 
 header .dots-container {
     display: inline-flex;
@@ -39,6 +62,13 @@ header .dots-container {
         justify-content: space-between;
         height: 100%;
         width: 100%;
+    }
+    header > div {
+        text-align: center;
+    }
+    header > div > a > span {
+        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -58,33 +88,30 @@ header .dots-container>a::before {
     margin-right: 5px;
     transition: .2s cubic-bezier(0.19,1,0.22,1);
 }
+
 header .dots-container>a:hover::before {
     width: 8px;
     height: 8px;
+    margin-right: 4px; 
     transition: .2s cubic-bezier(0.19,1,0.22,1);
 }
-
-/* header .dots-container>a {
-    width: 5rem; height: 5rem;
-    font-size: 3.5rem;
-    border-radius: 75%;
-    text-align: center;
-    background-color: var(--color-blue-mark);
-    color: var(--color-blue);
-} */
 
 header .dots-container>a:first-child::before{
     background: var(--color-blue);
 }
+
 header .dots-container>a:nth-child(2):before{
     background: var(--color-purple);
 }
+
 header .dots-container>a:nth-child(3):before{
     background: var(--color-yellow);
 }
+
 header .dots-container>a:nth-child(4):before{
     background: var(--color-red);
 }
+
 header .dots-container>a:nth-child(5):before{
     background: #0077B5;
 }
