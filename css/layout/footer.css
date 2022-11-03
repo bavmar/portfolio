@@ -113,4 +113,6 @@ footer .linkedin span {
     color: var(--color-heading);
     background-color: var(--color-green-mark);
     padding: 0 5px;
+    border-radius: 15%;
+    margin-left: 3px;
 }
