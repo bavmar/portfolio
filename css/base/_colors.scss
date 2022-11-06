@@ -1,0 +1,52 @@
+/* purple */
+.purple mark {
+    color: $purple;
+    background-color: $purple-mark;
+}
+
+.blue {
+    color: $blue;
+}
+
+.purple {
+    color: $purple;
+}
+
+footer .purple {
+    color: $purple;
+}
+
+footer .purple::before {
+    background-color: $purple;
+}
+
+/* green */
+footer .green {
+    color: $green;
+}
+
+footer .green::before {
+    background-color: $green;
+}
+
+/* blue */
+.blue mark {
+    color: $blue;
+    background-color: $blue-mark;
+}
+footer .blue {
+    color: $blue;
+}
+
+footer .blue::before {
+    background-color: $blue;
+}
+
+/* red */
+footer .red {
+    color: $red;
+}
+
+footer .red::before {
+    background-color: $red;
+}

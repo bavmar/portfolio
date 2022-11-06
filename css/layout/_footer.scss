@@ -96,7 +96,7 @@ footer > section > ul li a:hover {
 }
 
 footer > section > ul a{
-    color: var(--color-green);
+    color: $green;
     padding-left: 0;
     transition: 0.2s;
 }
@@ -110,8 +110,8 @@ footer ul:hover:before {
 }
 
 footer .linkedin span {
-    color: var(--color-heading);
-    background-color: var(--color-green-mark);
+    color: $heading;
+    background-color: $green-mark;
     padding: 0 5px;
     border-radius: 15%;
     margin-left: 3px;

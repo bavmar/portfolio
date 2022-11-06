@@ -12,7 +12,7 @@ header > div {
 header > div > a {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 2rem;
-    color: var(--color-green);
+    color: $green;
     position: relative;
     padding: 1rem 0;
 }
@@ -26,7 +26,7 @@ header > div > a::before {
     bottom: -0.5rem;
     width: 0;
     height: 3px;
-    background: var(--color-green);
+    background: $green;
     transition: width .7s cubic-bezier(0.19,1,0.22,1);
 }
 
@@ -75,7 +75,7 @@ header nav {
 header nav>a {
     font-size: 3rem;
     font-family: 'IBM Plex Mono', monospace;
-    color: var(--color-heading);
+    color: $heading;
 }
 
 header nav>a::before {
@@ -97,19 +97,19 @@ header nav>a:hover::before{
 }
 
 header nav>a:first-child::before{
-    background: var(--color-blue);
+    background: $blue;
 }
 
 header nav>a:nth-child(2):before{
-    background: var(--color-purple);
+    background: $purple;
 }
 
 header nav>a:nth-child(3):before{
-    background: var(--color-yellow);
+    background: $yellow;
 }
 
 header nav>a:nth-child(4):before{
-    background: var(--color-red);
+    background: $red;
 }
 
 header nav>a:nth-child(5):before{

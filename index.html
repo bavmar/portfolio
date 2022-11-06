@@ -15,7 +15,7 @@
         <link href='https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Raleway&display=swap' rel='stylesheet'>
 
         <!-- stylesheet -->
-        <link rel='stylesheet' href='css/main.css'>
+        <link rel='stylesheet' href='css/style.css'>
 
         <!-- favicon -->
         <link rel='icon' href='favicon.png'> 
@@ -31,25 +31,22 @@
         <section class='wrapper'>
             <canvas id='stars'></canvas>
             <div class='container'>
-                <header>
-                    <nav class='dots-container'>
-                        <a href='index.html' class="blue">bvm</a>
-                        <a href='projects.html'>prj</a>
+                <header role='banner'>
+                    <nav>
                         <a href='https://github.com/bavmar'target='_blank'>git</a>
                         <a href='https://codepen.io/BartvanMaarschalkerweerd' target='_blank'>cp</a>
                         <a href='https://www.linkedin.com/in/bart-van-maarschalkerweerd/' target='_blank'>in</a>
                     </nav>
-                    <div>
-                        <a href='mailto:bart.vanmaarschalkerweerd@outlook.com'><span>mailto:</span>bart.vanmaarschalkerweerd@outlook.com</a> 
-                    </div>
                 </header>
-                <main class='blue'>
-                    <small>&lt;h1&gt;</small>
-                    <h1>
-                        Hi I'm <mark>Bart van Maarschalkerweerd</mark> <wbr>web developer. 👋
-                    </h1>
-                    <small>&lt;&#47;h1&gt;</small>
-                    <footer>
+                <main role='main' class='blue'>
+                    <header>
+                        <small>&lt;h1&gt;</small>
+                        <h1>
+                            Hi I'm <mark>Bart van Maarschalkerweerd</mark> <wbr>web developer. 👋
+                        </h1>
+                        <small>&lt;&#47;h1&gt;</small>
+                    </header>
+                    <section role='navigation'>
                         <section>
                             <a href='projects.html' class='purple'>Projects✨</a>
                         </section>
@@ -65,11 +62,13 @@
                                 </div>
                             </ul>
                         </section>
-                    </footer>
+                    </section>
                 </main>
             </div>
-            <aside>THIS PORTFOLIO IS A WORK IN PROGRESS! 😁</aside>
-            <address>&copy; Bart van Maarschalkerweerd</address>
+            <footer>
+                <aside>THIS PORTFOLIO IS A WORK IN PROGRESS! 😁</aside>
+                <address>&copy; 2022 Bart van Maarschalkerweerd</address>
+            </footer>
         </section>
     </body>
     <!-- scripts -->

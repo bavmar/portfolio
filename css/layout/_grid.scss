@@ -25,14 +25,14 @@ main {
 aside {
     font-family: 'Roboto Slab',serif;
     font-size: 2rem;
-    color: var(--color-heading);
+    color: $heading;
     margin-top: 20px;
     text-align: center;
 }
 address {
     font-family: 'Roboto Slab',serif;
     font-size: 2rem;
-    color: var(--color-heading);
+    color: $heading;
     text-align: center;
 }
 
