@@ -1,5 +1,3 @@
-/* Typography */
-/* Styling */
 *,
 *::after,
 *::before {
@@ -16,6 +14,26 @@ html {
   font-size: 62.5%; /* 1 rem = 10px; 10px/16px = 62.5% */
   overflow: auto;
 }
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: 620px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media screen and (max-width: 599px) {
+  html {
+    font-size: 30%;
+  }
+}
 
 body {
   background-color: #171a19;
@@ -30,27 +48,6 @@ canvas {
   right: 0;
 }
 
-/* Shrink all elements that use REM (responsive) */
-@media only screen and (max-width: 1200px) {
-  html {
-    font-size: 56.25%;
-  }
-}
-@media only screen and (max-width: 900px) {
-  html {
-    font-size: 50%;
-  }
-}
-@media only screen and (max-width: 620px) {
-  html {
-    font-size: 40%;
-  }
-}
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 30%;
-  }
-}
 h1 {
   margin: 0;
   font-family: "Roboto Slab", serif;
@@ -158,58 +155,44 @@ h4 {
     stroke-dashoffset: 0;
   }
 }
-/* purple */
-.purple mark {
-  color: #9a4cd9;
-  background-color: rgba(154, 76, 217, 0.1411764706);
+.red {
+  color: #d9594c;
 }
-
-.blue {
-  color: #53a2be;
+.red mark {
+  color: #d9594c;
+  background-color: rgba(217, 89, 76, 0.14);
 }
 
 .purple {
   color: #9a4cd9;
 }
-
-footer .purple {
+.purple mark {
   color: #9a4cd9;
+  background-color: rgba(154, 76, 217, 0.14);
 }
 
-footer .purple::before {
-  background-color: #9a4cd9;
-}
-
-/* green */
-footer .green {
+.green {
   color: #419d78;
 }
-
-footer .green::before {
-  background-color: #419d78;
+.green mark {
+  color: #419d78;
+  background-color: rgba(65, 157, 120, 0.14);
 }
 
-/* blue */
+.blue {
+  color: #53a2be;
+}
 .blue mark {
   color: #53a2be;
-  background-color: rgba(83, 162, 190, 0.1411764706);
+  background-color: rgba(83, 162, 190, 0.14);
 }
 
-footer .blue {
-  color: #53a2be;
+.yellow {
+  color: #babe53;
 }
-
-footer .blue::before {
-  background-color: #53a2be;
-}
-
-/* red */
-footer .red {
-  color: #d9594c;
-}
-
-footer .red::before {
-  background-color: #d9594c;
+.yellow mark {
+  color: #babe53;
+  background-color: rgba(186, 190, 83, 0.14);
 }
 
 .wrapper {
@@ -373,15 +356,20 @@ footer {
   display: grid;
   grid-template-columns: 50% 50%;
 }
+@media screen and (max-width: 620px) {
+  footer {
+    grid-template-columns: auto;
+  }
+}
+footer > section {
+  text-align: center;
+}
 
 footer > section {
   text-align: center;
 }
 
 @media only screen and (max-width: 620px) {
-  footer {
-    grid-template-columns: auto;
-  }
   footer > section:first-of-type {
     margin-bottom: 20px;
   }
@@ -415,16 +403,10 @@ footer a::before {
   transition: width 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-/* footer ul:hover {
-    cursor: pointer;
-} */
 footer a:hover:before {
   width: 100%;
 }
 
-/* footer ul {
-
-} */
 footer ul:hover .hidden {
   visibility: visible;
   opacity: 1;

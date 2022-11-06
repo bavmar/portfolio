@@ -13,6 +13,22 @@
 html {
     font-size: 62.5%; /* 1 rem = 10px; 10px/16px = 62.5% */
     overflow: auto;
+
+    @include responsive(desktop) {
+        font-size: 56.25%;
+    }
+
+    @include responsive(tablet-landscape) {
+        font-size: 50%;
+    }
+
+    @include responsive(tablet-portrait) {
+        font-size: 40%;
+    }
+
+    @include responsive(phone) {
+        font-size: 30%;
+    }
 }
 
 body {
@@ -23,27 +39,5 @@ canvas {
     display: block;
     position: absolute;
     top:0;left:0;bottom:0;right:0;
-}
-
-/* Shrink all elements that use REM (responsive) */
-@media only screen and (max-width: 1200px) {
-    html {
-        font-size: 56.25%;
-    }
-}
-@media only screen and (max-width: 900px) {
-    html {
-        font-size: 50%;
-    }
-}
-@media only screen and (max-width: 620px) {
-    html {
-        font-size: 40%;
-    }
-}
-@media only screen and (max-width: 480px) {
-    html {
-        font-size: 30%;
-    }
 }
 

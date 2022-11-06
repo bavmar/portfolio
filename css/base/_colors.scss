@@ -1,52 +1,19 @@
-/* purple */
-.purple mark {
-    color: $purple;
-    background-color: $purple-mark;
-}
+$colors: (
+    'red': $red,
+    'purple': $purple,
+    'green': $green,
+    'blue': $blue,
+    'yellow': $yellow
+);
 
-.blue {
-    color: $blue;
-}
+//loop
+@each $color, $value in $colors {
+    .#{$color} {
+        color: $value;
 
-.purple {
-    color: $purple;
-}
-
-footer .purple {
-    color: $purple;
-}
-
-footer .purple::before {
-    background-color: $purple;
-}
-
-/* green */
-footer .green {
-    color: $green;
-}
-
-footer .green::before {
-    background-color: $green;
-}
-
-/* blue */
-.blue mark {
-    color: $blue;
-    background-color: $blue-mark;
-}
-footer .blue {
-    color: $blue;
-}
-
-footer .blue::before {
-    background-color: $blue;
-}
-
-/* red */
-footer .red {
-    color: $red;
-}
-
-footer .red::before {
-    background-color: $red;
+        mark {
+            color: $value;
+            background-color: rgba($value, $mark-opacity);
+        }
+    }
 }

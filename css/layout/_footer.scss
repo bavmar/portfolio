@@ -1,6 +1,13 @@
 footer {
     display: grid;
     grid-template-columns: 50% 50%;
+
+    @include responsive(tablet-portrait) {
+        grid-template-columns: auto;
+    }
+    > section {
+        text-align: center;
+    }
 }
 
 footer > section {
@@ -8,9 +15,6 @@ footer > section {
 }
 
 @media only screen and (max-width: 620px) {
-    footer {
-        grid-template-columns: auto;
-    }
 
     footer > section:first-of-type {
         margin-bottom: 20px;
@@ -48,17 +52,12 @@ footer a::before {
     transition: width .7s cubic-bezier(0.19,1,0.22,1);
 }
 
-/* footer ul:hover {
-    cursor: pointer;
-} */
 
 footer a:hover:before {
     width: 100%;
 }
 
-/* footer ul {
-    
-} */
+
 
 footer ul:hover .hidden {
     visibility: visible;
