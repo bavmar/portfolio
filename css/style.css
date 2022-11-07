@@ -159,6 +159,16 @@ span.emoji {
     stroke-dashoffset: 0;
   }
 }
+@keyframes jump-in {
+  0%, 20% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  20%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .red {
   color: #d9594c;
 }
@@ -291,40 +301,24 @@ header[role=banner] nav a.btn:hover {
   box-shadow: -0.8rem 0.8rem 0 0 rgba(65, 157, 120, 0.1411764706);
 }
 
-header nav > a:first-child::before {
-  background: #53a2be;
-}
-
-header nav > a:nth-child(2):before {
-  background: #9a4cd9;
-}
-
-header nav > a:nth-child(3):before {
-  background: #babe53;
-}
-
-header nav > a:nth-child(4):before {
-  background: #d9594c;
-}
-
-header nav > a:nth-child(5):before {
-  background: #0077B5;
-}
-
 footer {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 footer aside, footer address {
   font-family: "Roboto Slab", serif;
   font-size: 2rem;
   color: #fbfbfb;
 }
+footer address {
+  margin-top: 1rem;
+}
+
 section[role=navigation] {
   display: grid;
   grid-auto-flow: column;
   place-self: center;
-  margin-top: 50px;
+  margin-top: 7.5rem;
 }
 @media screen and (max-width: 620px) {
   section[role=navigation] {

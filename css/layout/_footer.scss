@@ -1,6 +1,6 @@
 footer {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 2rem;
 
     aside {
         font-family: 'Roboto Slab',serif;
@@ -10,5 +10,6 @@ footer {
     
     address {
         @extend aside;
+        margin-top: 1rem;
     }
 }
