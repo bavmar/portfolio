@@ -16,6 +16,7 @@ $colors: (
         }
         mark {
             color: $value;
+            filter: drop-shadow(0 0 50px $value);
             background-color: rgba($value, $mark-opacity);
         }
     }

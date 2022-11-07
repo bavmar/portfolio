@@ -1,15 +1,14 @@
 footer {
     text-align: center;
-    
+    margin-top: 20px;
+
     aside {
         font-family: 'Roboto Slab',serif;
         font-size: 2rem;
         color: $heading;
-        margin-top: 20px;
     }
     
     address {
         @extend aside;
-        margin-top: 0;
     }
 }

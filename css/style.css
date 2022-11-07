@@ -128,6 +128,10 @@ h4 {
   color: #fbfbfb;
 }
 
+span.emoji {
+  filter: drop-shadow(0 0 5px);
+}
+
 @keyframes go-top {
   0%, 40% {
     top: 0;
@@ -163,6 +167,7 @@ h4 {
 }
 .red mark {
   color: #d9594c;
+  filter: drop-shadow(0 0 50px #d9594c);
   background-color: rgba(217, 89, 76, 0.14);
 }
 
@@ -174,6 +179,7 @@ h4 {
 }
 .purple mark {
   color: #9a4cd9;
+  filter: drop-shadow(0 0 50px #9a4cd9);
   background-color: rgba(154, 76, 217, 0.14);
 }
 
@@ -185,6 +191,7 @@ h4 {
 }
 .green mark {
   color: #419d78;
+  filter: drop-shadow(0 0 50px #419d78);
   background-color: rgba(65, 157, 120, 0.14);
 }
 
@@ -196,6 +203,7 @@ h4 {
 }
 .blue mark {
   color: #53a2be;
+  filter: drop-shadow(0 0 50px #53a2be);
   background-color: rgba(83, 162, 190, 0.14);
 }
 
@@ -207,6 +215,7 @@ h4 {
 }
 .yellow mark {
   color: #babe53;
+  filter: drop-shadow(0 0 50px #babe53);
   background-color: rgba(186, 190, 83, 0.14);
 }
 
@@ -249,25 +258,25 @@ header[role=banner] nav {
   }
 }
 header[role=banner] nav a:not(:last-of-type) {
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: "IBM Plex Mono", monospace;
+  color: hsl(0deg, 0%, 65%);
+  filter: grayscale(1) drop-shadow(0 0 1px #e8e0e0);
+  text-align: center;
+  transition: 0.2s ease-in-out;
+}
+header[role=banner] nav a:not(:last-of-type):focus {
+  outline: none;
+}
+header[role=banner] nav a:not(:last-of-type):hover {
   color: #fbfbfb;
+  filter: grayscale(1) drop-shadow(0 0 10px #e8e0e0);
 }
-header[role=banner] nav a:not(:last-of-type)::before {
-  content: "";
-  display: inline-block;
-  position: relative;
-  border-radius: 100%;
-  width: 4px;
-  height: 4px;
-  margin-right: 5px;
-  transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+header[role=banner] nav a:not(:last-of-type) > i {
+  display: block;
 }
-header[role=banner] nav a:not(:last-of-type):hover::before {
-  width: 8px;
-  height: 8px;
-  margin-right: 4px;
-  transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+header[role=banner] nav a:not(:last-of-type) > span {
+  display: none;
 }
 header[role=banner] nav a:last-of-type,
 header[role=banner] nav a.btn {
@@ -307,25 +316,22 @@ header nav > a:nth-child(5):before {
 
 footer {
   text-align: center;
+  margin-top: 20px;
 }
 footer aside, footer address {
   font-family: "Roboto Slab", serif;
   font-size: 2rem;
   color: #fbfbfb;
-  margin-top: 20px;
 }
-footer address {
-  margin-top: 0;
-}
-
 section[role=navigation] {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-auto-flow: column;
+  place-self: center;
   margin-top: 50px;
 }
 @media screen and (max-width: 620px) {
   section[role=navigation] {
-    grid-template-columns: auto;
+    grid-auto-flow: row;
   }
   section[role=navigation] > section > ul {
     margin-top: 20px;
@@ -391,7 +397,7 @@ section[role=navigation] > section > ul > .hidden > li > a:hover {
   padding-left: 10px;
   transition: 0.2s;
 }
-section[role=navigation] > section > ul > .hidden > li.linkedin span {
+section[role=navigation] > section > ul > .hidden > li.linkedin span:first-of-type {
   color: #fbfbfb;
   background-color: rgba(65, 157, 120, 0.1411764706);
   padding: 0 5px;

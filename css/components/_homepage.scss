@@ -1,10 +1,11 @@
 section[role='navigation'] {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-auto-flow: column;
+    place-self: center;
     margin-top: 50px;
 
     @include responsive(tablet-portrait) {
-        grid-template-columns: auto;
+        grid-auto-flow: row;
 
         > section > ul {
             margin-top: 20px;
@@ -79,7 +80,7 @@ section[role='navigation'] {
                         }
                     }
                 }
-                > li.linkedin span {
+                > li.linkedin span:first-of-type {
                     color: $heading;
                     background-color: $green-mark;
                     padding: 0 5px;

@@ -15,26 +15,45 @@ header[role='banner'] {
         }
 
         a:not(:last-of-type) {
-            font-size: 3rem;
+            font-size: 4rem;
             font-family: 'IBM Plex Mono', monospace;
-            color: $heading;
+            color: hsl(0, calc(0*100%), 65%);
+            filter: grayscale(1) drop-shadow(0 0 1px #e8e0e0);
+            text-align: center;
+            transition: 0.2s ease-in-out;
 
-            &::before {
-                content: '';
-                display: inline-block;
-                position: relative;
-                border-radius: 100%;
-                width: 4px;
-                height: 4px;
-                margin-right: 5px;
-                transition: .2s cubic-bezier(0.19,1,0.22,1);
+            &:focus {
+                outline: none;
             }
-            &:hover::before {
-                width: 8px;
-                height: 8px;
-                margin-right: 4px; 
-                transition: .2s cubic-bezier(0.19,1,0.22,1);
+
+            &:hover {
+                color: $heading;
+                filter: grayscale(1) drop-shadow(0 0 10px #e8e0e0);
             }
+
+            // &::before {
+            //     content: '';
+            //     display: inline-block;
+            //     position: relative;
+            //     border-radius: 100%;
+            //     width: 4px;
+            //     height: 4px;
+            //     margin-right: 5px;
+            //     transition: .2s cubic-bezier(0.19,1,0.22,1);
+            // }
+            // &:hover::before {
+            //     width: 8px;
+            //     height: 8px;
+            //     margin-right: 4px; 
+            //     transition: .2s cubic-bezier(0.19,1,0.22,1);
+            // }
+            > i {
+                display: block;
+            }
+            > span {
+                display: none;
+            }
+
         }
 
         a:last-of-type,
