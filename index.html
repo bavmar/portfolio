@@ -30,7 +30,7 @@
     <body>
         <section class='wrapper'>
             <canvas id='stars'></canvas>
-            <div class='container'>
+            <div id='root'class='container'>
                 <header role='banner'>
                     <nav>
                         <a href='https://github.com/bavmar'target='_blank'><i class="fa-brands fa-github"></i></a>
@@ -39,40 +39,16 @@
                         <a href="mailto:bart.vanmaarschalkerweerd@outlook.com" class="btn">contact</a>
                     </nav>
                 </header>
-                <main role='main' class='blue'>
-                    <header>
-                        <small>&lt;h1&gt;</small>
-                        <h1>
-                            Hi I'm <mark>Bart van Maarschalkerweerd</mark> <wbr>web developer. <span class="emoji">👋</span>
-                        </h1>
-                        <small>&lt;&#47;h1&gt;</small>
-                    </header>
-                    <section role='navigation'>
-                        <section>
-                            <a href='projects.html' class='purple'>Projects<span class="emoji">✨</span></a>
-                        </section>
-                        <section> 
-                            <ul class='green'>Contact<span class="emoji">🤝</span>
-                                <div class='hidden'>
-                                    <li>
-                                        <a href='mailto:bart.vanmaarschalkerweerd@outlook.com'>E-mail<span class="emoji">📩</span></a>
-                                    </li>
-                                    <li class='linkedin'>
-                                        <a href='https://www.linkedin.com/in/bartvanmaarschalkerweerd/' target='_'>Linked<span>in</span><span class="emoji">👨‍💼</span></a>
-                                    </li>
-                                </div>
-                            </ul>
-                        </section>
-                    </section>
-                </main>
+                <main id='main-page' role='main'></main>
                 <footer>
                     <aside>THIS PORTFOLIO IS A WORK IN PROGRESS! 😁</aside>
                     <address>&copy; 2022 Bart van Maarschalkerweerd</address>
                 </footer>
             </div>
         </section>
+        <script src='js/main.js'></script>
     </body>
     <!-- scripts -->
-    <script src='js/main.js'></script>
-    <script src='js/starsTransition.js'></script>
+    
+    <!-- <script src='js/starsTransition.js'></script> -->
 </html>

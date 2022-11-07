@@ -159,14 +159,24 @@ span.emoji {
     stroke-dashoffset: 0;
   }
 }
+@keyframes wobbleY {
+  0%, 100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
 @keyframes jump-in {
   0%, 20% {
     opacity: 0;
     transform: scale(0);
+    bottom: 1000px;
   }
   20%, 100% {
     opacity: 1;
     transform: scale(1);
+    bottom: 0;
   }
 }
 .red {
@@ -240,6 +250,7 @@ span.emoji {
   max-width: 1000px;
   height: 90%;
   margin: 0 auto;
+  animation: jump-in 5s;
 }
 
 main {
@@ -247,6 +258,7 @@ main {
   display: block;
   height: 80%;
   padding: 100px 0;
+  transform: skew(1deg, -1deg) scaleY(1);
 }
 
 header[role=banner] {
@@ -403,7 +415,7 @@ section[role=navigation] > section > ul:hover .hidden {
 }
 
 .projects > ul {
-  height: 60vh;
+  height: 55vh;
   overflow-y: scroll;
 }
 
