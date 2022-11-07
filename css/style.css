@@ -158,6 +158,9 @@ h4 {
 .red {
   color: #d9594c;
 }
+.red::before {
+  background-color: #d9594c;
+}
 .red mark {
   color: #d9594c;
   background-color: rgba(217, 89, 76, 0.14);
@@ -165,6 +168,9 @@ h4 {
 
 .purple {
   color: #9a4cd9;
+}
+.purple::before {
+  background-color: #9a4cd9;
 }
 .purple mark {
   color: #9a4cd9;
@@ -174,6 +180,9 @@ h4 {
 .green {
   color: #419d78;
 }
+.green::before {
+  background-color: #419d78;
+}
 .green mark {
   color: #419d78;
   background-color: rgba(65, 157, 120, 0.14);
@@ -182,6 +191,9 @@ h4 {
 .blue {
   color: #53a2be;
 }
+.blue::before {
+  background-color: #53a2be;
+}
 .blue mark {
   color: #53a2be;
   background-color: rgba(83, 162, 190, 0.14);
@@ -189,6 +201,9 @@ h4 {
 
 .yellow {
   color: #babe53;
+}
+.yellow::before {
+  background-color: #babe53;
 }
 .yellow mark {
   color: #babe53;
@@ -397,9 +412,6 @@ footer > section > ul a {
   transition: 0.2s;
 }
 
-/* footer > section > ul a:hover {
-
-} */
 footer ul:hover:before {
   height: 100%;
 }
@@ -410,6 +422,86 @@ footer .linkedin span {
   padding: 0 5px;
   border-radius: 15%;
   margin-left: 3px;
+}
+
+section[role=navigation] {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 50px;
+}
+@media screen and (max-width: 620px) {
+  section[role=navigation] {
+    grid-template-columns: auto;
+  }
+}
+section[role=navigation] > section {
+  text-align: center;
+}
+section[role=navigation] > section > a, section[role=navigation] > section > ul {
+  font-family: "Montserrat", sans-serif;
+  font-size: 6rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+section[role=navigation] > section > a::before {
+  content: "";
+  z-index: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 0px;
+  height: 4px;
+  transition: width 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+section[role=navigation] > section > a:hover::before {
+  width: 100%;
+}
+section[role=navigation] > section > ul::before {
+  content: "";
+  z-index: 0;
+  display: block;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 4px;
+  height: 0;
+  transition: height 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+section[role=navigation] > section > ul:hover::before {
+  height: 100%;
+}
+section[role=navigation] > section > ul > .hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+section[role=navigation] > section > ul > .hidden > li {
+  font-size: 3.6rem;
+  text-align: left;
+  list-style: none;
+}
+section[role=navigation] > section > ul > .hidden > li > a {
+  color: #419d78;
+  padding-left: 0;
+  transition: 0.2s;
+}
+section[role=navigation] > section > ul > .hidden > li > a:hover {
+  padding-left: 10px;
+  transition: 0.2s;
+}
+section[role=navigation] > section > ul > .hidden > li.linkedin span {
+  color: #fbfbfb;
+  background-color: rgba(65, 157, 120, 0.1411764706);
+  padding: 0 5px;
+  border-radius: 15%;
+  margin-left: 3px;
+}
+section[role=navigation] > section > ul:hover .hidden {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .projects > ul {

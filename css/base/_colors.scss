@@ -11,6 +11,9 @@ $colors: (
     .#{$color} {
         color: $value;
 
+        &::before {
+            background-color: $value;
+        }
         mark {
             color: $value;
             background-color: rgba($value, $mark-opacity);
