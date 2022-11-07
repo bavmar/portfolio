@@ -275,9 +275,6 @@ header[role=banner] nav a:not(:last-of-type):hover {
 header[role=banner] nav a:not(:last-of-type) > i {
   display: block;
 }
-header[role=banner] nav a:not(:last-of-type) > span {
-  display: none;
-}
 header[role=banner] nav a:last-of-type,
 header[role=banner] nav a.btn {
   font-size: 3rem;

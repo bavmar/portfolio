@@ -30,28 +30,8 @@ header[role='banner'] {
                 color: $heading;
                 filter: grayscale(1) drop-shadow(0 0 10px #e8e0e0);
             }
-
-            // &::before {
-            //     content: '';
-            //     display: inline-block;
-            //     position: relative;
-            //     border-radius: 100%;
-            //     width: 4px;
-            //     height: 4px;
-            //     margin-right: 5px;
-            //     transition: .2s cubic-bezier(0.19,1,0.22,1);
-            // }
-            // &:hover::before {
-            //     width: 8px;
-            //     height: 8px;
-            //     margin-right: 4px; 
-            //     transition: .2s cubic-bezier(0.19,1,0.22,1);
-            // }
             > i {
                 display: block;
-            }
-            > span {
-                display: none;
             }
 
         }
