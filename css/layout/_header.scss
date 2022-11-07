@@ -1,99 +1,58 @@
-header {
+header[role='banner'] {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    height: 10%;
-}
-header > div {
-    flex-basis: 100%;
-    text-align: right;
-}
-
-header > div > a {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 2rem;
-    color: $green;
-    position: relative;
-    padding: 1rem 0;
-}
-
-header > div > a::before {
-    content: '';
-    z-index: 0;
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: -0.5rem;
-    width: 0;
-    height: 3px;
-    background: $green;
-    transition: width .7s cubic-bezier(0.19,1,0.22,1);
-}
-
-header > div > a:hover::before {
-    width: 100%;
-}
-
-header > div > a:hover span {
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 0.2s;
-    transition-duration: 0.2s;
-}
-
-header > div > a > span {
-    visibility: hidden;
-    opacity: 0;
-    transition-duration: 0.1s;
-}
-
-header nav {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    width: 50%;
-}
-
-@media only screen and (max-width: 620px) {
-    header nav {
+    height: 15%;
+    nav {
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
         height: 100%;
-        width: 100%;
-    }
-    header > div {
-        text-align: center;
-    }
-    header > div > a > span {
-        visibility: visible;
-        opacity: 1;
-    }
-}
+        width: 50%;
 
-header nav>a {
-    font-size: 3rem;
-    font-family: 'IBM Plex Mono', monospace;
-    color: $heading;
-}
+        @include responsive(phone) {
+            width: 100%;
+        }
 
-header nav>a::before {
-    content: '';
-    display: inline-block;
-    position: relative;
-    border-radius: 100%;
-    width: 4px;
-    height: 4px;
-    margin-right: 5px;
-    transition: .2s cubic-bezier(0.19,1,0.22,1);
-}
+        a:not(:last-of-type) {
+            font-size: 3rem;
+            font-family: 'IBM Plex Mono', monospace;
+            color: $heading;
 
-header nav>a:hover::before{
-    width: 8px;
-    height: 8px;
-    margin-right: 4px; 
-    transition: .2s cubic-bezier(0.19,1,0.22,1);
+            &::before {
+                content: '';
+                display: inline-block;
+                position: relative;
+                border-radius: 100%;
+                width: 4px;
+                height: 4px;
+                margin-right: 5px;
+                transition: .2s cubic-bezier(0.19,1,0.22,1);
+            }
+            &:hover::before {
+                width: 8px;
+                height: 8px;
+                margin-right: 4px; 
+                transition: .2s cubic-bezier(0.19,1,0.22,1);
+            }
+        }
+
+        a:last-of-type,
+        a.btn {
+            font-size: 3rem;
+            font-family: 'IBM Plex Mono', monospace;
+            color: $heading;
+            background-color: $green;
+            padding: 1rem 3rem;
+            transition: .2s all ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                transform: translate(.8rem, -.8rem);
+                box-shadow: -.8rem .8rem 0 0 $green-mark;
+            }
+        }
+    }
 }
 
 header nav>a:first-child::before{

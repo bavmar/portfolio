@@ -200,7 +200,6 @@ h4 {
   height: 100vh;
   overflow: hidden;
 }
-
 .wrapper .container {
   position: relative;
   width: 90vw;
@@ -209,112 +208,48 @@ h4 {
   margin: 0 auto;
 }
 
-header, main {
+main {
   width: 100%;
   display: block;
-}
-
-main {
   height: 80%;
   padding: 100px 0;
 }
 
-aside {
+aside, address {
   font-family: "Roboto Slab", serif;
   font-size: 2rem;
   color: #fbfbfb;
   margin-top: 20px;
-  text-align: center;
 }
 
 address {
-  font-family: "Roboto Slab", serif;
-  font-size: 2rem;
-  color: #fbfbfb;
-  text-align: center;
+  margin-top: 0;
 }
 
-header {
+header[role=banner] {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  height: 10%;
+  height: 15%;
 }
-
-header > div {
-  flex-basis: 100%;
-  text-align: right;
-}
-
-header > div > a {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 2rem;
-  color: #419d78;
-  position: relative;
-  padding: 1rem 0;
-}
-
-header > div > a::before {
-  content: "";
-  z-index: 0;
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: -0.5rem;
-  width: 0;
-  height: 3px;
-  background: #419d78;
-  transition: width 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-header > div > a:hover::before {
-  width: 100%;
-}
-
-header > div > a:hover span {
-  visibility: visible;
-  opacity: 1;
-  transition-delay: 0.2s;
-  transition-duration: 0.2s;
-}
-
-header > div > a > span {
-  visibility: hidden;
-  opacity: 0;
-  transition-duration: 0.1s;
-}
-
-header nav {
+header[role=banner] nav {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
   width: 50%;
 }
-
-@media only screen and (max-width: 620px) {
-  header nav {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
+@media screen and (max-width: 599px) {
+  header[role=banner] nav {
     width: 100%;
   }
-  header > div {
-    text-align: center;
-  }
-  header > div > a > span {
-    visibility: visible;
-    opacity: 1;
-  }
 }
-header nav > a {
+header[role=banner] nav a:not(:last-of-type) {
   font-size: 3rem;
   font-family: "IBM Plex Mono", monospace;
   color: #fbfbfb;
 }
-
-header nav > a::before {
+header[role=banner] nav a:not(:last-of-type)::before {
   content: "";
   display: inline-block;
   position: relative;
@@ -324,12 +259,26 @@ header nav > a::before {
   margin-right: 5px;
   transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
-
-header nav > a:hover::before {
+header[role=banner] nav a:not(:last-of-type):hover::before {
   width: 8px;
   height: 8px;
   margin-right: 4px;
   transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+header[role=banner] nav a:last-of-type,
+header[role=banner] nav a.btn {
+  font-size: 3rem;
+  font-family: "IBM Plex Mono", monospace;
+  color: #fbfbfb;
+  background-color: #419d78;
+  padding: 1rem 3rem;
+  transition: 0.2s all ease-in-out;
+}
+header[role=banner] nav a:last-of-type:hover,
+header[role=banner] nav a.btn:hover {
+  cursor: pointer;
+  transform: translate(0.8rem, -0.8rem);
+  box-shadow: -0.8rem 0.8rem 0 0 rgba(65, 157, 120, 0.1411764706);
 }
 
 header nav > a:first-child::before {
