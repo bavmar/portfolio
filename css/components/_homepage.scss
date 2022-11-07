@@ -5,6 +5,15 @@ section[role='navigation'] {
 
     @include responsive(tablet-portrait) {
         grid-template-columns: auto;
+
+        > section > ul {
+            margin-top: 20px;
+        }
+
+        > section > ul > .hidden:first-of-type {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 
     > section {

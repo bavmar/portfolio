@@ -327,6 +327,13 @@ section[role=navigation] {
   section[role=navigation] {
     grid-template-columns: auto;
   }
+  section[role=navigation] > section > ul {
+    margin-top: 20px;
+  }
+  section[role=navigation] > section > ul > .hidden:first-of-type {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 section[role=navigation] > section {
   text-align: center;
