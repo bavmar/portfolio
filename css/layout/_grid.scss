@@ -19,16 +19,4 @@ main {
     padding: 100px 0;
 }
 
-aside {
-    font-family: 'Roboto Slab',serif;
-    font-size: 2rem;
-    color: $heading;
-    margin-top: 20px;
-}
-
-address {
-    @extend aside;
-    margin-top: 0;
-}
-
 
