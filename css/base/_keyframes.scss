@@ -42,11 +42,27 @@
     0%, 20% {
         opacity: 0;
         transform: scale(0);
+        filter: blur(2rem);
         bottom: 1000px;
     }
     20%, 100% {
         opacity: 1;
         transform: scale(1);
+        filter: blur(0);
         bottom: 0;
+    }
+}
+
+@keyframes jump-out {
+    0%, 20% {
+        opacity: 1;
+        transform: scale(1);
+        
+        bottom: 0;
+    }
+    20%, 100% {
+        opacity: 0;
+        transform: scale(0);
+        bottom: 1000px
     }
 }

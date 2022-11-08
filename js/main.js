@@ -3,22 +3,34 @@ console.log('Deze website is nog in ontwikkeling 😁')
 const route = (e) => {
     e = e || window.event;
     e.preventDefault();
-    window.history.pushState({}, "", e.target.href);
+    window.history.pushState({}, '', e.target.href);
     handleLocation();
 };
 
 const routes = {
-    404: "./pages/404.html",
-    "/": "./pages/index.html",
-    "/page/index.html": "./pages/index.html",
-    "/projects": "./pages/projects.html",
+    404: './pages/404.html',
+    '/': './pages/index.html',
+    '/index.html': './pages/index.html',
+    '/projects': './pages/projects.html',
+    '/portfolio/index.html': './pages/projects.html',
+    '/portfolio/projects': './pages/projects.html',
 };
 
 const handleLocation = async () => {
     const path = window.location.pathname;
+    const element = document.getElementById('main-page');
     const route = routes[path] || routes[404];
     const html = await fetch(route).then((data) => data.text());
-    document.getElementById('main-page').innerHTML = html;
+    // element.classList.add('transition-jump-out');
+    element.innerHTML = html;
+    
+    
+    let title = 'Bart van Maarschalkerweerd Portfolio | '
+
+    if (window.location.pathname === '/') title += 'Home'
+    if (window.location.pathname === '/projects') title += 'Projects'
+
+    document.title = title;
 };
 
 window.onpopstate = handleLocation;

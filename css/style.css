@@ -171,12 +171,26 @@ span.emoji {
   0%, 20% {
     opacity: 0;
     transform: scale(0);
+    filter: blur(2rem);
     bottom: 1000px;
   }
   20%, 100% {
     opacity: 1;
     transform: scale(1);
+    filter: blur(0);
     bottom: 0;
+  }
+}
+@keyframes jump-out {
+  0%, 20% {
+    opacity: 1;
+    transform: scale(1);
+    bottom: 0;
+  }
+  20%, 100% {
+    opacity: 0;
+    transform: scale(0);
+    bottom: 1000px;
   }
 }
 .red {
@@ -261,10 +275,18 @@ main {
   transform: skew(1deg, -1deg) scaleY(1);
 }
 
+.transition-jump-in {
+  animation: jump-in 5s;
+}
+
+.transition-jump-out {
+  animation: jump-out 5s;
+}
+
 header[role=banner] {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   height: 15%;
 }
 header[role=banner] nav {
@@ -272,7 +294,7 @@ header[role=banner] nav {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  width: 50%;
+  width: 75%;
 }
 @media screen and (max-width: 599px) {
   header[role=banner] nav {
@@ -280,8 +302,6 @@ header[role=banner] nav {
   }
 }
 header[role=banner] nav a:not(:last-of-type) {
-  font-size: 4rem;
-  font-family: "IBM Plex Mono", monospace;
   color: hsl(0deg, 0%, 65%);
   filter: grayscale(1) drop-shadow(0 0 1px #e8e0e0);
   text-align: center;
@@ -294,8 +314,13 @@ header[role=banner] nav a:not(:last-of-type):hover {
   color: #fbfbfb;
   filter: grayscale(1) drop-shadow(0 0 10px #e8e0e0);
 }
-header[role=banner] nav a:not(:last-of-type) > i {
+header[role=banner] nav a:not(:last-of-type) i {
+  font-size: 4rem;
   display: block;
+}
+header[role=banner] nav a:not(:last-of-type) span {
+  font-size: 2rem;
+  font-family: "IBM Plex Mono", monospace;
 }
 header[role=banner] nav a:last-of-type,
 header[role=banner] nav a.btn {
@@ -336,10 +361,10 @@ section[role=navigation] {
   section[role=navigation] {
     grid-auto-flow: row;
   }
-  section[role=navigation] > section > ul {
+  section[role=navigation] > section > div {
     margin-top: 20px;
   }
-  section[role=navigation] > section > ul > .hidden:first-of-type {
+  section[role=navigation] > section > div > ul:first-of-type {
     visibility: visible;
     opacity: 1;
   }
@@ -347,12 +372,13 @@ section[role=navigation] {
 section[role=navigation] > section {
   text-align: center;
 }
-section[role=navigation] > section > a, section[role=navigation] > section > ul {
+section[role=navigation] > section > a, section[role=navigation] > section > div {
   font-family: "Montserrat", sans-serif;
   font-size: 6rem;
   font-weight: 700;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 section[role=navigation] > section > a::before {
   content: "";
@@ -368,7 +394,7 @@ section[role=navigation] > section > a::before {
 section[role=navigation] > section > a:hover::before {
   width: 100%;
 }
-section[role=navigation] > section > ul::before {
+section[role=navigation] > section > div::before {
   content: "";
   z-index: 0;
   display: block;
@@ -379,35 +405,35 @@ section[role=navigation] > section > ul::before {
   height: 0;
   transition: height 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }
-section[role=navigation] > section > ul:hover::before {
+section[role=navigation] > section > div:hover::before {
   height: 100%;
 }
-section[role=navigation] > section > ul > .hidden {
+section[role=navigation] > section > div > ul {
   visibility: hidden;
   opacity: 0;
 }
-section[role=navigation] > section > ul > .hidden > li {
+section[role=navigation] > section > div > ul > li {
   font-size: 3.6rem;
   text-align: left;
   list-style: none;
 }
-section[role=navigation] > section > ul > .hidden > li > a {
+section[role=navigation] > section > div > ul > li > a {
   color: #419d78;
   padding-left: 0;
   transition: 0.2s;
 }
-section[role=navigation] > section > ul > .hidden > li > a:hover {
+section[role=navigation] > section > div > ul > li > a:hover {
   padding-left: 10px;
   transition: 0.2s;
 }
-section[role=navigation] > section > ul > .hidden > li.linkedin span:first-of-type {
+section[role=navigation] > section > div > ul > li.linkedin span:first-of-type {
   color: #fbfbfb;
   background-color: rgba(65, 157, 120, 0.1411764706);
   padding: 0 5px;
   border-radius: 15%;
   margin-left: 3px;
 }
-section[role=navigation] > section > ul:hover .hidden {
+section[role=navigation] > section > div:hover ul {
   visibility: visible;
   opacity: 1;
   transition-delay: 0.2s;
@@ -464,7 +490,7 @@ details[open] summary ~ * {
 }
 
 .projects > ul > li:first-of-type {
-  border-bottom-color: #ddd;
+  border-bottom-color: #3178c6;
 }
 
 .projects > ul > li:nth-child(2) {

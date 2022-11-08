@@ -21,4 +21,10 @@ main {
     transform: skew(1deg, -1deg) scaleY(1);
 }
 
+.transition-jump-in {
+    animation: jump-in 5s;
+}
 
+.transition-jump-out {
+    animation: jump-out 5s;
+}

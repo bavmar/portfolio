@@ -1,22 +1,20 @@
 header[role='banner'] {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
     height: 15%;
     nav {
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
         height: 100%;
-        width: 50%;
+        width: 75%;
 
         @include responsive(phone) {
             width: 100%;
         }
 
-        a:not(:last-of-type) {
-            font-size: 4rem;
-            font-family: 'IBM Plex Mono', monospace;
+        a:not(:last-of-type){
             color: hsl(0, calc(0*100%), 65%);
             filter: grayscale(1) drop-shadow(0 0 1px #e8e0e0);
             text-align: center;
@@ -30,8 +28,15 @@ header[role='banner'] {
                 color: $heading;
                 filter: grayscale(1) drop-shadow(0 0 10px #e8e0e0);
             }
-            > i {
+
+            i {
+                font-size: 4rem;
                 display: block;
+            }
+
+            span {
+                font-size: 2rem;
+                font-family: 'IBM Plex Mono', monospace;
             }
 
         }
