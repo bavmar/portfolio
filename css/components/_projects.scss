@@ -3,15 +3,34 @@
     overflow-y: scroll;
 }
 
-details[open] summary ~ * {
-    animation: sweep .5s ease-in-out;
-    padding-left: 20px;
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 20px;
+
+    > article {
+        background-color: $dark-background;
+        margin-bottom: 3.5vh;
+        border-radius: 30px;
+        padding: 3rem 5rem;
+        img {
+            width: 100%;
+        }
+
+        h3 {
+            font-size: 3rem;
+        }
+    }
+    details[open] summary ~ * {
+        animation: sweep .5s ease-in-out;
+        padding-left: 20px;
+    }
+
 }
+
+
   
-@keyframes sweep {
-    0%    {opacity: 0;}
-    100%  {opacity: 1;}
-}
+
 /* width */
 ::-webkit-scrollbar {
     width: 20px;

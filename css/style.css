@@ -193,6 +193,14 @@ span.emoji {
     bottom: 1000px;
   }
 }
+@keyframes sweep {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .red {
   color: #d9594c;
 }
@@ -271,8 +279,10 @@ main {
   width: 100%;
   display: block;
   height: 80%;
-  padding: 100px 0;
-  transform: skew(1deg, -1deg) scaleY(1);
+  padding: 0;
+}
+main > header {
+  margin-top: 100px;
 }
 
 .transition-jump-in {
@@ -445,19 +455,28 @@ section[role=navigation] > section > div:hover ul {
   overflow-y: scroll;
 }
 
-details[open] summary ~ * {
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 20px;
+}
+.projects > article {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 3.5vh;
+  border-radius: 30px;
+  padding: 3rem 5rem;
+}
+.projects > article img {
+  width: 100%;
+}
+.projects > article h3 {
+  font-size: 3rem;
+}
+.projects details[open] summary ~ * {
   animation: sweep 0.5s ease-in-out;
   padding-left: 20px;
 }
 
-@keyframes sweep {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 /* width */
 ::-webkit-scrollbar {
   width: 20px;
